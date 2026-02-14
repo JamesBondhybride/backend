@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A introductory project for learning backend.",
+  "homepage": "https://github.com/JamesBondhybride/backend#readme",
+  "bugs": {
+    "url": "https://github.com/JamesBondhybride/backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesBondhybride/backend.git"
+  },
+  "license": "ISC",
+  "author": "Junaed",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
