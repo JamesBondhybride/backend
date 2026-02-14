@@ -30,3 +30,20 @@ This repository is a learning-focused backend project, built by following along 
 ---
 
 ## 📂 Project Structure
+backend/
+├── src/              # Source code
+│   ├── routes/       # API routes
+│   ├── controllers/  # Business logic
+│   ├── models/       # Database models (if applicable)
+│   └── utils/        # Helper functions
+├── package.json      # Dependencies and scripts
+├── .gitignore        # Ignored files
+└── README.md         # Project documentation
+
+
+---
+
+## ⚙️ Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JamesBondhybride/backend.git
