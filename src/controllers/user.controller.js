@@ -76,12 +76,14 @@ const loginUser = async (req, res) => {
 const logoutUser = async (req, res) => {
     try {
         // Update user's logged-in status to false
-        const user = await User.findByIdAndUpdate(
-            req.user._id,
-            { loggedIn: false },
-            { new: true }
-        );
-        res.status(200).json({ message: "Logout successful", user });
+        const { email } = req.body;
+        const user = await User.findOne({email});
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        user.loggedIn = false;
+        await user.save();
+        res.status(200).json({ message: "Logout successful"});
     } catch (error) {
         res.status(500).json({ message: "Internal server error" });
     }
